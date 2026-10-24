@@ -1,0 +1,15 @@
+
+# CHAPTER: GENERATIVE AI & RAG ARCHITECTURES
+
+## 1. Transformer Neural Network Architecture
+Transformers (Vaswani et al., 2017) revolutionized Natural Language Processing by replacing recurrent neural networks (RNNs) with Self-Attention mechanisms.
+- Scaled Dot-Product Attention computes query-key matrix multiplication to assign dynamic weights to word representations.
+- Multi-Head Attention allows the model to jointly attend to information from different representation subspaces.
+- Positional Encodings inject sequential order without relying on recurrent loops.
+
+## 2. Retrieval-Augmented Generation (RAG)
+RAG combines non-parametric vector memory with parametric Large Language Models (LLMs) to eliminate hallucinations and provide verifiable source citations.
+1. Document Chunking: Breaking text into contextual chunks.
+2. Embeddings: Mapping chunks into a high-dimensional vector space using sentence transformers.
+3. Similarity Search: Querying FAISS/Chroma vector DB to find top-K context passages.
+4. Prompt Augmentation: Feeding retrieved context into the LLM context window.

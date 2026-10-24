@@ -1,0 +1,34 @@
+# Task Checklist: StudyMind - AI-Powered Personal Learning OS
+
+- [ ] Project Foundation & Database Setup <!-- id: 0 -->
+    - [ ] Create directory structure (`config/`, `core/`, `database/`, `features/`, `ui/`, `data/`, `utils/`) <!-- id: 1 -->
+    - [ ] Define requirements.txt and `.env.example` <!-- id: 2 -->
+    - [ ] Implement `settings.py` for API keys, model parameters, and default configurations <!-- id: 3 -->
+    - [ ] Implement SQLite schema and ORM layer in `database/db.py` and `database/models.py` <!-- id: 4 -->
+- [ ] Core AI & Document RAG Engine <!-- id: 5 -->
+    - [ ] Build `document_processor.py` supporting PDF, DOCX, PPTX, TXT parsing and chunking <!-- id: 6 -->
+    - [ ] Implement `embeddings.py` (sentence-transformers / local fallback) <!-- id: 7 -->
+    - [ ] Build `vector_store.py` using FAISS / local vector store with similarity search <!-- id: 8 -->
+    - [ ] Implement `llm.py` with multi-provider support (Groq/OpenAI/HuggingFace + Smart Local Fallback mode) <!-- id: 9 -->
+    - [ ] Create modular prompt management in `prompts.py` <!-- id: 10 -->
+    - [ ] Implement `rag.py` pipeline with transparency metadata, citation tracking, and grounding verification <!-- id: 11 -->
+- [ ] Educational Feature Modules <!-- id: 12 -->
+    - [ ] Implement `chat.py` AI Tutor logic (5 modes, 3 difficulty levels, citations) <!-- id: 13 -->
+    - [ ] Implement `summaries.py` (Executive summary, key concepts, formulas, exam questions) <!-- id: 14 -->
+    - [ ] Build `quiz.py` (MCQ, T/F, Short Answer + Adaptive Quiz difficulty engine) <!-- id: 15 -->
+    - [ ] Build `flashcards.py` (Card creation, flipping, mastery tracking) <!-- id: 16 -->
+    - [ ] Implement `mock_exam.py` (Timed test, report, score analysis) <!-- id: 17 -->
+    - [ ] Implement `study_plan.py` (AI Study Planner & daily schedule generator) <!-- id: 18 -->
+    - [ ] Build `weak_topics.py` ("Fix My Weakness" AI revision loop) <!-- id: 19 -->
+    - [ ] Implement `analytics.py` (Plotly visual charts, performance metrics, dynamic AI insights) <!-- id: 20 -->
+    - [ ] Implement `evaluation.py` (BLEU, ROUGE, Grounding metrics & Dev Eval dashboard) <!-- id: 21 -->
+- [ ] UI/UX Design System & Pages <!-- id: 22 -->
+    - [ ] Build custom glassmorphism/dark theme CSS system in `ui/styles.py` <!-- id: 23 -->
+    - [ ] Create UI component library in `ui/components.py` <!-- id: 24 -->
+    - [ ] Build main `app.py` with sidebar navigation, onboarding, dashboard, and page router <!-- id: 25 -->
+    - [ ] Implement page views: Dashboard, Library, AI Tutor, Semantic Search, Summarize, Quiz, Flashcards, Mock Exam, Study Plan, Analytics, Weak Topics, Responsible AI, Settings, Professor Demo / How It Works <!-- id: 26 -->
+    - [ ] Seed high-quality CS Demo Data (DBMS, Operating Systems, Computer Networks, AI) <!-- id: 27 -->
+- [ ] Verification, Execution & Testing <!-- id: 28 -->
+    - [ ] Test end-to-end user workflows (upload -> chunk -> embedding -> RAG chat -> quiz -> database log -> analytics update) <!-- id: 29 -->
+    - [ ] Verify API fallback mode works seamlessly without crashing when no API key is supplied <!-- id: 30 -->
+    - [ ] Create comprehensive `README.md` with architecture diagram, setup instructions, and GenAI concepts documentation <!-- id: 31 -->

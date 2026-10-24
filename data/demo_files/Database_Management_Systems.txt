@@ -1,0 +1,17 @@
+
+# CHAPTER: DATABASE MANAGEMENT SYSTEMS & NORMALIZATION
+
+## 1. Purpose of Database Normalization
+Normalization is a systematic technique of organizing data in a relational database to reduce data redundancy and eliminate undesirable anomalies such as Insertion Anomaly, Deletion Anomaly, and Update Anomaly.
+
+## 2. Normal Forms Breakdown
+- First Normal Form (1NF): Requires that all attributes contain atomic (indivisible) values and every column contains unique values. No repeating groups allowed.
+- Second Normal Form (2NF): Must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key. Eliminates Partial Dependencies.
+- Third Normal Form (3NF): Must be in 2NF and no non-key attribute is transitively dependent on the primary key. Eliminates Transitive Dependencies (X -> Y and Y -> Z).
+- Boyce-Codd Normal Form (BCNF): A stricter version of 3NF where for every functional dependency X -> Y, X must be a super key.
+
+## 3. ACID Properties in Database Transactions
+- Atomicity: Ensures that all operations in a transaction complete successfully or all are rolled back. (All or Nothing).
+- Consistency: Ensures that the database transitions from one valid state to another valid state, preserving constraints.
+- Isolation: Ensures that concurrent execution of transactions leaves the database in the same state as if executed sequentially.
+- Durability: Guarantees that once a transaction commits, its updates persist permanently even during system crashes.

@@ -1,0 +1,22 @@
+
+# CHAPTER: OPERATING SYSTEMS & DEADLOCK MANAGEMENT
+
+## 1. Deadlock Definition
+A deadlock is an undesirable state in operating systems where two or more processes are permanently blocked because each process holds a resource that another process needs, creating a circular dependency.
+
+## 2. Four Necessary Conditions for Deadlock (Coffman Conditions)
+For a deadlock to occur, all four Coffman conditions must hold simultaneously:
+1. Mutual Exclusion: At least one resource must be held in a non-shareable mode.
+2. Hold and Wait: A process must hold at least one resource while waiting to acquire additional resources held by other processes.
+3. No Preemption: Resources cannot be forcibly taken away from a process; they can only be released voluntarily after completion.
+4. Circular Wait: A closed chain of processes exists such that each process holds one or more resources needed by the next process in the chain.
+
+## 3. Deadlock Handling Strategies
+- Deadlock Prevention: Eliminates at least one of the four necessary conditions during design.
+- Deadlock Avoidance: Uses resource allocation state algorithms (such as Dijkstra's Banker's Algorithm) to dynamically inspect whether granting a resource request leaves the system in a safe state.
+- Deadlock Detection and Recovery: Allows the system to enter a deadlock, periodically runs a detection algorithm (Wait-For Graph), and recovers by process termination or resource preemption.
+
+## 4. CPU Scheduling Algorithms
+- First-Come, First-Served (FCFS): Non-preemptive, suffers from the Convoy Effect.
+- Shortest Job First (SJF): Optimal average waiting time, but requires knowing execution time in advance.
+- Round Robin (RR): Preemptive scheduling with a fixed time quantum, ideal for time-sharing systems.
